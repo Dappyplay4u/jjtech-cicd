@@ -2,7 +2,7 @@
 Fully automated and secured Terraform infra pipeline
 
 ## CICD Infra setup
-1) ###### GitHub setup
+1) ####### GitHub setup
     Import GitHub Repository by using the existing repo "devops-fully-automated-infra" (https://github.com/cvamsikrishna11/devops-fully-automated-infra)     
     - Go to GitHub (github.com)
     - Login to your GitHub Account
