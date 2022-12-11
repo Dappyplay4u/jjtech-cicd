@@ -31,3 +31,20 @@ output "stage_instance_ip" {
 output "prod_instance_ip" {
     value = module.ec2_prod.instance_public_ip
 }
+
+# print the url of the server
+output "prod_instance_ip_ipv4_url" {
+  value = join("", ["http://", module.ec2_prod.instance_public_ip])
+}
+
+
+# print the url of the server
+output "dev_instance_ip_ipv4_url" {
+  value = join("", ["http://", module.ec2_dev.instance_public_ip])
+}
+
+# print the url of the server
+output "dev_instance_ip_ipv4_url" {
+  value = join("", ["http://", module.ec2_stage.instance_public_ip])
+}
+
