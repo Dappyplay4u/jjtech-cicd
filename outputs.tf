@@ -44,7 +44,7 @@ output "devinstance_ip_ipv4_url" {
 }
 
 # print the url of the server
-output "devinstance_ip_ipv4_url" {
+output "stageinstance_ip_ipv4_url" {
   value = join("", ["http://", module.ec2_stage.instance_public_ip])
 }
 
