@@ -44,7 +44,10 @@ resource "aws_security_group" "ec3_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
+resource "aws_iam_instance_profile" "instance_profile" {
+  name = join("", [var.name, "-", "iam-instance-profile"])
+  role = var.iam_role_name
+}
 resource "aws_instance" "web_instance" {
   ami                    = "ami-0b0dcb5067f052a63"
   instance_type          = "t3.small"
