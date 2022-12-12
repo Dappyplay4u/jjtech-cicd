@@ -33,3 +33,12 @@ module "ec2_prod" {
   iam_role_name = module.iam.ec2_iam_role_name
   key_pair_name = var.key_pair_name
 }
+
+# module code to create the ec2 instance with user data
+module "ec3_web" {
+  source = "./ec3"
+  name   = "web"
+  tags          = local.common_tags
+  iam_role_name = module.iam.ec3_iam_role_name
+  key_pair_name = var.key_pair_name
+}

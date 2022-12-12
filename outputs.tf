@@ -48,3 +48,7 @@ output "stageinstance_ip_ipv4_url" {
   value = join("", ["http://", module.ec2_stage.instance_public_ip])
 }
 
+# print the url of the server
+output "webinstance_ip_ipv4_url" {
+  value = join("", ["http://", module.ec3_web.instance_public_ip])
+}
