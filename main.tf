@@ -34,7 +34,7 @@ module "ec2_prod" {
   key_pair_name = var.key_pair_name
 }
 
-# module code to create the ec2 instance with user data
+# module code to create the ec3 instance with user data
 module "ec3_web" {
   source = "./ec3"
   name   = "web"
